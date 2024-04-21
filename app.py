@@ -138,7 +138,7 @@ def main():
 # In[7]:
 
 
-    len(landmarks)
+    #len(landmarks)
 
 
 # In[8]:
