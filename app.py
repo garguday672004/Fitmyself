@@ -14,6 +14,12 @@ from streamlit_webrtc import webrtc_streamer
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 
+import os
+
+# Get the device index from environment variable, default to 0
+webcam_index = int(os.getenv('WEBCAM_INDEX', 0))
+# cap = cv2.VideoCapture(webcam_index)
+
 st.title("AI Pose Tracker")
 
 st.write("PRESS 'q' 4 times slowly to begin the computer vision code after every pop_up window.... ")
@@ -259,7 +265,7 @@ def main():
 # In[18]:
 
 
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(webcam_index)
 
 # Curl counter variables
     counter = 0 
